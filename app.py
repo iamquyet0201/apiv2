@@ -3,7 +3,7 @@ import numpy as np
 import joblib
 
 # Load mô hình, scaler và encoder
-model = joblib.load("mo_hinh_du_bao_sat_lo.pkl")
+model = joblib.load("mo.pkl")
 scaler = joblib.load("scaler.pkl")
 label_encoder = joblib.load("label_encoder.pkl")
 
