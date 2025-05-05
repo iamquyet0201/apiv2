@@ -13,8 +13,11 @@ app = Flask(__name__)
 def home():
     return "✅ Landslide Prediction API is running!"
 
-@app.route("/predict", methods=["POST"])
+@app.route("/predict", methods=["GET", "POST"])
 def predict():
+    if request.method == "GET":
+        return jsonify({"message": "✅ Use POST method to submit prediction data."})
+
     try:
         data = request.get_json()
 
